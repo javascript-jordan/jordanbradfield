@@ -1,0 +1,12 @@
+$unit: 5%;
+
+@for $i from 0 through 20 {
+  $space: $unit * $i;
+
+  .h-#{$i * 5} {
+    height: $space;
+  }
+  .w-#{$i * 5} {
+    width: $space;
+  }
+}

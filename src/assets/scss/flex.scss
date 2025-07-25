@@ -1,0 +1,33 @@
+$flex-positions: flex-start, center, flex-end, space-between, space-around,
+  space-evenly;
+
+.flex {
+  display: flex;
+
+  &.row {
+    flex-direction: row;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  @each $position in $flex-positions {
+    &.align-items-#{$position} {
+      align-items: $position;
+    }
+
+    &.justify-content-#{$position} {
+      justify-content: $position;
+    }
+  }
+
+  .grow {
+    flex-grow: 1;
+  }
+  .shrink {
+    flex-shrink: 1;
+  }
+}

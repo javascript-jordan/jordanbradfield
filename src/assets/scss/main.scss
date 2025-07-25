@@ -1,0 +1,30 @@
+@import "./colors.scss";
+@import "./dimensions.scss";
+@import "./flex.scss";
+@import "./media.scss";
+@import "./scrollbar.scss";
+@import "./spacing.scss";
+
+html,
+body,
+#app {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+
+  @font-face {
+    font-family: 'Jetbrains';
+    src: url("../fonts/JetBrainsMono-Regular.woff2");
+  }
+
+  * {
+    font-family: 'Jetbrains' !important;
+  }
+
+  .generic-x-padding {
+    @extend .p-l-2;
+    @extend .p-r-2;
+  }
+}

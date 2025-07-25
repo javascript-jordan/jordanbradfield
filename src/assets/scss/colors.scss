@@ -1,0 +1,36 @@
+$dark-color: rgb(18, 18, 18);
+$grey-color: rgb(66, 66, 66);
+$primary-color: #00aff0;
+$white-color: #ffffff;
+
+.background-dark {
+    background-color: $dark-color;
+}
+
+.background-grey {
+    background-color: $grey-color;
+}
+
+.background-primary {
+    background-color: $primary-color;
+}
+
+.background-white {
+    background-color: $white-color;
+}
+
+.color-dark {
+    color: $dark-color;
+}
+
+.color-grey {
+    color: $grey-color;
+}
+
+.color-primary {
+    color: $primary-color;
+}
+
+.color-white {
+    color: $white-color;
+}

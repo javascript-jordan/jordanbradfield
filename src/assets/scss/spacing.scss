@@ -1,0 +1,48 @@
+$directions-margin: (
+  "l": "margin-left",
+  "t": "margin-top",
+  "r": "margin-right",
+  "b": "margin-bottom",
+);
+$directions-padding: (
+  "l": "padding-left",
+  "t": "padding-top",
+  "r": "padding-right",
+  "b": "padding-bottom",
+);
+$unit: 8px;
+
+@for $i from 0 through 20 {
+  @each $selector, $style in $directions-margin {
+    .m-#{$selector}-#{$i} {
+      #{$style}: $unit * $i;
+    }
+    .m-x-#{$i} {
+      margin-left: $unit * $i;
+      margin-right: $unit * $i;
+    }
+    .m-y-#{$i} {
+      margin-top: $unit * $i;
+      margin-bottom: $unit * $i;
+    }
+    .m-#{$i} {
+      #{$style}: $unit * $i;
+    }
+  }
+  @each $selector, $style in $directions-padding {
+    .p-#{$selector}-#{$i} {
+      #{$style}: $unit * $i;
+    }
+    .p-x-#{$i} {
+      padding-left: $unit * $i;
+      padding-right: $unit * $i;
+    }
+    .p-y-#{$i} {
+      padding-top: $unit * $i;
+      padding-bottom: $unit * $i;
+    }
+    .p-#{$i} {
+      #{$style}: $unit * $i;
+    }
+  }
+}
