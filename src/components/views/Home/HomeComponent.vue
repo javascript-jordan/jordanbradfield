@@ -3,8 +3,4 @@
     <h1>Home Component</h1>
   </div>
 </template>
-<script lang="ts">
-export default {
-  name: "HomeComponent",
-};
-</script>
+<script lang="ts" setup></script>
