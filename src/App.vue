@@ -1,5 +1,13 @@
 <template>
-  <router-view />
+  <v-app>
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
-<style lang="scss"></style>
+<script lang="ts">
+export default {
+  name: "AppComponent",
+};
+</script>
