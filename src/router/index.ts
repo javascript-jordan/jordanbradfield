@@ -14,8 +14,44 @@ export const routes: Array<RouteRecordRaw> = [
     },
   },
   {
+    path: "/contact",
+    name: "contact",
+    component: () =>
+      import(
+        /* webpackChunkName: "home" */ "../components/views/Contact/ContactComponent.vue"
+      ),
+    meta: {
+      title: "Contact",
+      icon: "mdi-email",
+    },
+  },
+  {
+    path: "/experience",
+    name: "experience",
+    component: () =>
+      import(
+        /* webpackChunkName: "home" */ "../components/views/Experience/ExperienceComponent.vue"
+      ),
+    meta: {
+      title: "Experience",
+      icon: "mdi-timeline-plus",
+    },
+  },
+  {
     path: "/:catchAll(.*)",
     redirect: "/",
+  },
+  {
+    path: "/skills",
+    name: "skills",
+    component: () =>
+      import(
+        /* webpackChunkName: "skills" */ "../components/views/Skills/SkillsComponent.vue"
+      ),
+    meta: {
+      title: "Skills",
+      icon: "mdi-xml",
+    },
   },
 ];
 
