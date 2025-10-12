@@ -2,9 +2,7 @@
 
 <template>
   <v-app>
-    <v-main>
-      <h1 class="w-10">Hello World!</h1>
-    </v-main>
+    <v-main><router-view /></v-main>
   </v-app>
 </template>
 
