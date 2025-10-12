@@ -1,0 +1,31 @@
+$flex-spacing: (
+  "flex-start",
+  "flex-end",
+  "center",
+  "space-between",
+  "space-around",
+  "space-evenly"
+);
+$flex-directions: ("column", "row", "column-reverse", "row-reverse");
+
+.flex {
+  display: flex;
+
+  @each $direction in $flex-directions {
+    &.#{$direction} {
+      flex-direction: #{$direction};
+    }
+  }
+
+  @each $spacing in $flex-spacing {
+    &.align-#{$spacing} {
+      align-items: #{$spacing};
+    }
+  }
+
+  @each $spacing in $flex-spacing {
+    &.justify-#{$spacing} {
+      justify-content: #{$spacing};
+    }
+  }
+}

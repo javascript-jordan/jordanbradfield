@@ -1,0 +1,30 @@
+@use "sass:map";
+
+$unit: 8px;
+$margins: (
+  "m": "margin",
+  "m-t": "margin-top",
+  "m-r": "margin-right",
+  "m-b": "margin-bottom",
+  "m-l": "margin-left",
+);
+$paddings: (
+  "p": "padding",
+  "p-t": "padding-top",
+  "p-r": "padding-right",
+  "p-b": "padding-bottom",
+  "p-l": "padding-left",
+);
+
+@for $i from 1 through 100 {
+  @each $shorthand, $longhand in $margins {
+    .#{$shorthand}-#{$i} {
+      #{$longhand}: $unit * ($i);
+    }
+  }
+  @each $shorthand, $longhand in $paddings {
+    .#{$shorthand}-#{$i} {
+      #{$longhand}: $unit * ($i);
+    }
+  }
+}

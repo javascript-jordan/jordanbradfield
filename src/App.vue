@@ -3,9 +3,11 @@
 <template>
   <v-app>
     <v-main>
-      <h1>Hello World!</h1>
+      <h1 class="w-10">Hello World!</h1>
     </v-main>
   </v-app>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@use "./scss/main.scss";
+</style>

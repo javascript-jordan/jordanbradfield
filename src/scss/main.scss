@@ -1,0 +1,11 @@
+@use "./dimensions.scss";
+@use "./flex.scss";
+@use "./spacing.scss";
+html,
+body,
+#app,
+main.v-main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
