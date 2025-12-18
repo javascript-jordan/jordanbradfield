@@ -4,8 +4,8 @@ import NavbarComponent from "./components/common/Navbar/NavbarComponent.vue";
 
 <template>
   <v-app>
-    <v-main class="flex column">
-      <navbar-component />
+    <navbar-component />
+    <v-main>
       <router-view />
     </v-main>
   </v-app>

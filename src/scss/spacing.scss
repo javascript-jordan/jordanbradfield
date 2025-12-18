@@ -27,4 +27,20 @@ $paddings: (
       #{$longhand}: $unit * ($i);
     }
   }
+  .m-x-#{$i} {
+    margin-left: $unit * ($i);
+    margin-right: $unit * ($i);
+  }
+  .m-y-#{$i} {
+    margin-top: $unit * ($i);
+    margin-bottom: $unit * ($i);
+  }
+  .p-x-#{$i} {
+    padding-left: $unit * ($i);
+    padding-right: $unit * ($i);
+  }
+  .p-y-#{$i} {
+    padding-top: $unit * ($i);
+    padding-bottom: $unit * ($i);
+  }
 }
