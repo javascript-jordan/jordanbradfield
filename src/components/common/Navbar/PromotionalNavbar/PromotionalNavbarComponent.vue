@@ -11,6 +11,9 @@
 </template>
 <style lang="scss" scoped>
 #promotional-navbar {
+  header {
+    z-index: 1200;
+  }
   :deep(.v-toolbar-title) {
     font-size: 14px;
     font-weight: 500;
