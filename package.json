@@ -18,6 +18,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.2.8",
     "@mdi/font": "^3.8.95",
     "vue": "^3.5.22",
     "vue-router": "^4.5.1",
