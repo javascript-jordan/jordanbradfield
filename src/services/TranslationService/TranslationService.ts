@@ -15,13 +15,15 @@ class TranslationService implements ITranslationService {
     let currentSubObject: ObjectOrString;
     let result: string = "";
 
-    keys.forEach((subKey: string) => {
+    keys.forEach((subKey: string, i: number) => {
       if (!currentSubObject) {
         currentSubObject = languagePack[subKey] as ObjectOrString;
       } else {
         if (typeof currentSubObject !== "string") {
           currentSubObject = currentSubObject[subKey] as ObjectOrString;
-        } else {
+        }
+
+        if (typeof currentSubObject === "string" && i + 1 === keys.length) {
           result = currentSubObject;
         }
       }
