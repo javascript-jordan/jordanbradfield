@@ -1,12 +1,16 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import TranslationService from "@/services/TranslationService/TranslationService";
+import { computed } from "vue";
+import { useDisplay } from "vuetify";
+
+const { smAndDown } = useDisplay();
+const slogan = computed(() =>
+  smAndDown.value ? "Jordan Bradfield" : TranslationService.translate("NAVBAR.PROMOTION"),
+);
+</script>
 <template>
   <div id="promotional-navbar">
-    <v-toolbar
-      class="toolbar"
-      density="compact"
-      :elevation="2"
-      title="The professional you need with the skills you want"
-    ></v-toolbar>
+    <v-toolbar class="toolbar" density="compact" :elevation="2" :title="slogan"></v-toolbar>
   </div>
 </template>
 <style lang="scss" scoped>
