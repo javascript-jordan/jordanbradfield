@@ -10,7 +10,12 @@ const slogan = computed(() =>
 </script>
 <template>
   <div id="promotional-navbar">
-    <v-toolbar class="toolbar" density="compact" :elevation="2" :title="slogan"></v-toolbar>
+    <v-toolbar
+      class="toolbar bg-grey-darken-4"
+      density="compact"
+      :elevation="2"
+      :title="slogan"
+    ></v-toolbar>
   </div>
 </template>
 <style lang="scss" scoped>

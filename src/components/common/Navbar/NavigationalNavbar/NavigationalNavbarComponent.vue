@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import vuetify from "@/plugins/vuetify";
 import router, { ROUTES } from "@/router";
-import { computed, reactive, type ComputedRef } from "vue";
+import { computed, reactive, ref, type ComputedRef } from "vue";
 import {
   useRoute,
   type RouteLocationNormalizedLoadedGeneric,
@@ -9,18 +9,36 @@ import {
 } from "vue-router";
 import { useDisplay } from "vuetify";
 
+const emit = defineEmits(["toggle-drawer"]);
+
 const activeRoute: RouteLocationNormalizedLoadedGeneric = useRoute();
 const display = useDisplay();
-console.log(display);
 
 const headerTitle: ComputedRef<RouteRecordNameGeneric | string> = computed(() => {
   return display.smAndDown.value ? activeRoute.name : "Jordan Bradfield";
 });
+const menuItems = [
+  {
+    title: "LinkedIn",
+    prependIcon: "mdi-linkedin",
+    href: "https://www.linkedin.com/in/jordan-bradfield-9333a1119",
+    target: "_blank",
+  },
+  { type: "divider" },
+  {
+    title: "Github",
+    prependIcon: "mdi-git",
+    href: "https://github.com/javascript-jordan/jordanbradfield",
+    target: "_blank",
+  },
+  { type: "divider" },
+  { title: "Resume", prependIcon: "mdi-file-download", onClick: () => console.log("Download") },
+];
 </script>
 <template>
   <v-app-bar id="navigation-navbar" class="p-x-1" color="primary" :elevation="10">
     <template v-slot:prepend>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="() => emit('toggle-drawer', true)"></v-app-bar-nav-icon>
     </template>
     <v-app-bar-title
       ><h4 class="m-l-2" :class="{ 'text-center ml-0': vuetify.display.smAndDown.value }">
@@ -38,9 +56,20 @@ const headerTitle: ComputedRef<RouteRecordNameGeneric | string> = computed(() =>
       </v-tab>
     </v-tabs>
     <template v-slot:append>
-      <v-btn icon>
+      <v-btn id="menu-activator" icon>
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
+      <v-menu activator="#menu-activator">
+        <v-list
+          :items="menuItems"
+          class="py-0"
+          density="compact"
+          item-value="code"
+          item-props
+          slim
+        ></v-list>
+      </v-menu>
+      <div class="resume d-none"><h1>hello</h1></div>
     </template>
   </v-app-bar>
 </template>
