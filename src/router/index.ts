@@ -9,6 +9,12 @@ type Routes = {
 
 export const ROUTES: Routes[] = [
   {
+    name: "Home",
+    path: "/",
+    component: () => import("../components/views/Home/HomeComponent.vue"),
+    icon: "mdi-home",
+  },
+  {
     name: "Experience",
     path: "/experience",
     component: () => import("../components/views/Experience/ExperienceComponent.vue"),
