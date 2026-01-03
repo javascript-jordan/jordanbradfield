@@ -37,7 +37,7 @@ const menuItems = [
 </script>
 <template>
   <v-app-bar id="navigation-navbar" class="p-x-1" color="primary" :elevation="10">
-    <template v-slot:prepend>
+    <template v-slot:prepend v-if="display.smAndDown.value">
       <v-app-bar-nav-icon @click="() => emit('toggle-drawer', true)"></v-app-bar-nav-icon>
     </template>
     <v-app-bar-title
