@@ -68,7 +68,7 @@ const closeDrawer = () => emit("toggle-drawer", false);
     z-index: 2000;
   }
   .left {
-    transform: translateX(-100%);
+    transform: translateX(-110%);
 
     .pic-info {
       .pic,
