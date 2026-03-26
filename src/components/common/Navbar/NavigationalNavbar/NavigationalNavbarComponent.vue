@@ -1,7 +1,9 @@
 <script lang="ts" setup>
+import type { INavigationItems } from "@/interfaces";
 import vuetify from "@/plugins/vuetify";
-import router, { ROUTES } from "@/router";
-import { computed, reactive, ref, type ComputedRef } from "vue";
+import { ROUTES } from "@/router";
+import constants from "@/util/constants";
+import { computed, type ComputedRef } from "vue";
 import {
   useRoute,
   type RouteLocationNormalizedLoadedGeneric,
@@ -17,18 +19,18 @@ const display = useDisplay();
 const headerTitle: ComputedRef<RouteRecordNameGeneric | string> = computed(() => {
   return display.smAndDown.value ? activeRoute.name : "Jordan Bradfield";
 });
-const menuItems = [
+const menuItems: INavigationItems[] = [
   {
     title: "LinkedIn",
     prependIcon: "mdi-linkedin",
-    href: "https://www.linkedin.com/in/jordan-bradfield-9333a1119",
+    href: constants.EXTERNAL_LINKS.LINKEDIN,
     target: "_blank",
   },
   { type: "divider" },
   {
     title: "Github",
     prependIcon: "mdi-git",
-    href: "https://github.com/javascript-jordan/jordanbradfield",
+    href: constants.EXTERNAL_LINKS.GITHUB,
     target: "_blank",
   },
   { type: "divider" },
@@ -74,9 +76,9 @@ const menuItems = [
   </v-app-bar>
 </template>
 <style lang="scss">
-@import "@/scss/spacing.scss";
+@use "@/scss/spacing.scss";
 #navigation-navbar {
-  padding-inline-end: $unit;
+  padding-inline-end: spacing.$unit;
   position: relative !important;
 
   .v-toolbar__content > .v-toolbar-title {

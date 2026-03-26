@@ -1,3 +1,4 @@
-export { Experiences as IExperiences };
+export { default as IExperiences } from "./lib/Iexperiences";
 export { ILanguagePack } from "./lib/ILanguagePack";
-export { ITranslationDirective } from "./lib/ITranslationDirective";
+export { default as INavigationItems } from "./lib/INavigationItems";
+export { default as ITranslationDirective } from "./lib/ITranslationDirective";

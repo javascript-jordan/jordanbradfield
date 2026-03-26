@@ -1,12 +1,16 @@
 import en from "@/i18n/en";
-import fr from "@/i18n/fr";
 import es from "@/i18n/es";
-import type { ITranslationService } from "./ITranslationService";
+import fr from "@/i18n/fr";
 import type { ObjectOrString } from "@/interfaces/ILanguagePack";
+import type { ITranslationService } from "./ITranslationService";
 
 class TranslationService implements ITranslationService {
   ALL_LANGUAGES: ObjectOrString = { en, fr, es };
   CURRENT_LANGUAGE: string = window.navigator.language.split("-")[0] || "en";
+
+  get currentLanguage(): ObjectOrString {
+    return (this, this.ALL_LANGUAGES[this.CURRENT_LANGUAGE]);
+  }
 
   translate(key: string): string {
     const languagePack: ObjectOrString = (this.ALL_LANGUAGES[this.CURRENT_LANGUAGE] ||
