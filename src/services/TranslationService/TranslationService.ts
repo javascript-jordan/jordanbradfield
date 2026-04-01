@@ -1,7 +1,7 @@
 import en from "@/i18n/en";
 import es from "@/i18n/es";
 import fr from "@/i18n/fr";
-import type { ObjectOrString } from "@/interfaces/ILanguagePack";
+import type { ObjectOrString } from "@/interfaces/lib/ILanguagePack";
 import type { ITranslationService } from "./ITranslationService";
 
 class TranslationService implements ITranslationService {
