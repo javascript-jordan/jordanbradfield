@@ -16,7 +16,7 @@ $paddings: (
   "p-l": "padding-left",
 );
 
-@for $i from 1 through 100 {
+@for $i from 0 through 100 {
   @each $shorthand, $longhand in $margins {
     .#{$shorthand}-#{$i} {
       #{$longhand}: $unit * ($i);

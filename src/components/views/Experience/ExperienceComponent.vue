@@ -21,32 +21,51 @@ const openPanels = ref([0]);
             <v-avatar :image="item.logo"></v-avatar>
           </template>
           <v-card class="elevation-1">
-            <v-card-title class="text-headline-small" tag="h2"
-              >{{ item.company }} - {{ item.title }}</v-card-title
-            >
-            <v-card-subtitle>{{ item.duration }}</v-card-subtitle>
-
+            <div class="flex align-center p-1">
+              <v-avatar class="title-icon" :image="item.logo"></v-avatar>
+              <div class="flex column justify-items-center">
+                <v-card-title class="text-headline-small" tag="h2"
+                  >{{ item.company }} - {{ item.title }}</v-card-title
+                >
+                <v-card-subtitle>{{ item.duration }}</v-card-subtitle>
+              </div>
+            </div>
             <v-card-text
               ><h4>Employment Decription</h4>
               <br />{{ item.description }}</v-card-text
             >
+
+            <v-divider opacity=".7" thickness="3" gradient>Assignments</v-divider>
+
             <v-timeline dense density="compact" align="start" side="end">
-              <v-timeline-item size="large" v-for="(project, index) in item.projects" :key="index">
-                <template v-slot:icon>
-                  <v-avatar :image="project.logo"></v-avatar>
-                </template>
+              <v-timeline-item
+                size="large"
+                :icon="project.icon"
+                dot-color="primary"
+                v-for="(project, index) in item.projects"
+                :key="index"
+              >
                 <v-card class="elevation-1">
                   <v-card-title class="text-headline-small flex justify-content-center"
-                    ><img class="m-r-1" height="35" width="35" :src="project.logo" />
-                    <p class="project-title">{{ project.title }}</p></v-card-title
+                    ><v-icon
+                      class="icon-title m-r-2"
+                      :icon="project.icon"
+                      size="large"
+                      color="primary"
+                    ></v-icon>
+                    <div class="title flex column">
+                      {{ project.title }}
+                      <v-card-subtitle class="p-l-0">{{ project.date }}</v-card-subtitle>
+                    </div></v-card-title
                   >
-                  <v-card-subtitle>{{ project.date }}</v-card-subtitle>
-                  <v-card-text>
+
+                  <v-card-text class="p-0">
                     <v-expansion-panels class="m-t-1" v-model="openPanels">
                       <v-expansion-panel
                         expanded="true"
                         title="Project Details"
                         :text="project.description"
+                        class="m-b-2"
                       >
                       </v-expansion-panel>
                     </v-expansion-panels>
@@ -75,43 +94,51 @@ const openPanels = ref([0]);
   word-wrap: break-word;
   word-break: break-word;
 
-  :deep {
-    .v-timeline-item__body,
-    .project-title,
-    .v-card-title {
-      min-width: 0px;
-      width: 100%;
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      white-space: normal;
+  .title-icon {
+    display: none;
+  }
+
+  :deep(.v-timeline-item__body),
+  :deep(.project-title),
+  :deep(.v-card-title) {
+    min-width: 0px;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  :deep(.text-headline-small) {
+    .v-icon {
+      display: none;
     }
-    .text-headline-small {
-      img {
-        display: none;
-        border-radius: 50%;
-      }
+  }
+  :deep(.v-timeline-divider) {
+    margin-left: 0.5em;
+    :deep(.v-icon) {
+      /* color: #000000; */
     }
-    .v-slide-group__content {
-      width: 100%;
-      flex-wrap: wrap;
-    }
+  }
+  :deep(.v-slide-group__content) {
+    width: 100%;
+    flex-wrap: wrap;
   }
 
   @media #{map.get($display-breakpoints, 'xs')} {
-    :deep {
-      .v-timeline-divider {
-        display: none;
-      }
+    .title-icon {
+      display: flex;
+    }
 
-      .v-timeline-item__body {
-        padding-inline-start: 0px;
-      }
+    :deep(.v-timeline-divider) {
+      display: none;
+    }
 
-      .text-headline-small {
-        img {
-          border-radius: 50%;
-          display: inline-block;
-        }
+    :deep(.v-timeline-item__body) {
+      padding-inline-start: 0px;
+    }
+
+    :deep(.text-headline-small) {
+      .icon-title {
+        display: block;
       }
     }
   }
