@@ -1,10 +1,35 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
 import { mount } from "@vue/test-utils";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import ExperienceComponent from "../../../../components/views/Experience/ExperienceComponent.vue";
+
+type ExperienceProject = {
+  title: string;
+  description: string;
+  date: string;
+  logo: string;
+  skills: string[];
+};
+
+type ExperienceItem = {
+  title: string;
+  company: string;
+  duration: string;
+  logo: string;
+  description: string;
+  projects: ExperienceProject[];
+};
+
+type WrapperType = ReturnType<typeof mount>;
+
+type ExperienceComponentVm = {
+  openPanels: number[];
+  timeline: ExperienceItem[];
+  orderSkills: (skills: string[]) => string[];
+};
 
 // Mock the TranslationService
 vi.mock("../../../../services/TranslationService/TranslationService", () => {
-  const mockTimeline = [
+  const mockTimeline: ExperienceItem[] = [
     {
       title: "Senior Developer",
       company: "Tech Corp",
@@ -53,10 +78,12 @@ vi.mock("../../../../services/TranslationService/TranslationService", () => {
 });
 
 describe("ExperienceComponent", () => {
-  let wrapper: any;
+  let wrapper: WrapperType;
+  let vm: ExperienceComponentVm;
 
   beforeEach(() => {
     wrapper = mount(ExperienceComponent);
+    vm = wrapper.vm as unknown as ExperienceComponentVm;
   });
 
   describe("Component Rendering", () => {
@@ -82,19 +109,19 @@ describe("ExperienceComponent", () => {
 
   describe("Component Data Integrity", () => {
     it("should initialize openPanels ref correctly", () => {
-      expect(wrapper.vm.openPanels).toBeDefined();
-      expect(Array.isArray(wrapper.vm.openPanels)).toBe(true);
-      expect(wrapper.vm.openPanels.length).toBeGreaterThan(0);
+      expect(vm.openPanels).toBeDefined();
+      expect(Array.isArray(vm.openPanels)).toBe(true);
+      expect(vm.openPanels.length).toBeGreaterThan(0);
     });
 
     it("should have access to timeline data", () => {
-      expect(wrapper.vm.timeline).toBeDefined();
-      expect(Array.isArray(wrapper.vm.timeline)).toBe(true);
-      expect(wrapper.vm.timeline.length).toBe(2);
+      expect(vm.timeline).toBeDefined();
+      expect(Array.isArray(vm.timeline)).toBe(true);
+      expect(vm.timeline.length).toBe(2);
     });
 
     it("should have first timeline item with correct structure", () => {
-      const firstItem = wrapper.vm.timeline[0];
+      const firstItem = vm.timeline[0];
       expect(firstItem.title).toBe("Senior Developer");
       expect(firstItem.company).toBe("Tech Corp");
       expect(firstItem.duration).toBe("2020 - Present");
@@ -102,7 +129,7 @@ describe("ExperienceComponent", () => {
     });
 
     it("should have second timeline item with correct structure", () => {
-      const secondItem = wrapper.vm.timeline[1];
+      const secondItem = vm.timeline[1];
       expect(secondItem.title).toBe("Junior Developer");
       expect(secondItem.company).toBe("StartUp Inc");
       expect(secondItem.duration).toBe("2018 - 2020");
@@ -110,14 +137,14 @@ describe("ExperienceComponent", () => {
     });
 
     it("should have orderSkills method", () => {
-      expect(typeof wrapper.vm.orderSkills).toBe("function");
+      expect(typeof vm.orderSkills).toBe("function");
     });
   });
 
   describe("orderSkills Function", () => {
     it("should sort skills alphabetically in ascending order", () => {
       const unsortedSkills = ["React", "Vue", "Angular"];
-      const sorted = wrapper.vm.orderSkills(unsortedSkills);
+      const sorted = vm.orderSkills(unsortedSkills);
 
       expect(sorted[0]).toBe("Angular");
       expect(sorted[1]).toBe("React");
@@ -126,7 +153,7 @@ describe("ExperienceComponent", () => {
 
     it("should handle single skill", () => {
       const singleSkill = ["React"];
-      const sorted = wrapper.vm.orderSkills(singleSkill);
+      const sorted = vm.orderSkills(singleSkill);
 
       expect(sorted.length).toBe(1);
       expect(sorted[0]).toBe("React");
@@ -134,14 +161,14 @@ describe("ExperienceComponent", () => {
 
     it("should handle empty skills array", () => {
       const emptySkills: string[] = [];
-      const sorted = wrapper.vm.orderSkills(emptySkills);
+      const sorted = vm.orderSkills(emptySkills);
 
       expect(sorted.length).toBe(0);
     });
 
     it("should handle skills with numbers and special characters", () => {
       const skillsWithNumbers = ["Node.js", "C#", "C++"];
-      const sorted = wrapper.vm.orderSkills(skillsWithNumbers);
+      const sorted = vm.orderSkills(skillsWithNumbers);
 
       expect(sorted[0]).toBe("C#");
       expect(sorted[1]).toBe("C++");
@@ -151,7 +178,7 @@ describe("ExperienceComponent", () => {
     it("should not modify the original array", () => {
       const originalSkills = ["React", "Vue", "Angular"];
       const originalReference = originalSkills;
-      wrapper.vm.orderSkills(originalSkills);
+      vm.orderSkills(originalSkills);
 
       // The original array may or may not be modified depending on implementation
       // but should still contain same elements
@@ -176,10 +203,10 @@ describe("ExperienceComponent", () => {
 
   describe("Project Data Structure", () => {
     it("should have projects with all required fields", () => {
-      const allProjects = wrapper.vm.timeline.flatMap((exp: any) => exp.projects);
+      const allProjects = vm.timeline.flatMap((exp: ExperienceItem) => exp.projects);
       expect(allProjects.length).toBeGreaterThan(0);
 
-      allProjects.forEach((project: any) => {
+      allProjects.forEach((project: ExperienceProject) => {
         expect(project).toHaveProperty("title");
         expect(project).toHaveProperty("description");
         expect(project).toHaveProperty("date");
@@ -190,7 +217,7 @@ describe("ExperienceComponent", () => {
     });
 
     it("should have first project with correct data", () => {
-      const firstProject = wrapper.vm.timeline[0].projects[0];
+      const firstProject = vm.timeline[0].projects[0];
       expect(firstProject.title).toBe("Project A");
       expect(firstProject.date).toBe("2020-2021");
       expect(firstProject.skills).toContain("React");
@@ -201,7 +228,7 @@ describe("ExperienceComponent", () => {
 
   describe("Experience Data Fields", () => {
     it("should have all required fields in each experience", () => {
-      wrapper.vm.timeline.forEach((experience: any) => {
+      vm.timeline.forEach((experience: ExperienceItem) => {
         expect(experience).toHaveProperty("title");
         expect(experience).toHaveProperty("company");
         expect(experience).toHaveProperty("duration");
@@ -212,7 +239,7 @@ describe("ExperienceComponent", () => {
     });
 
     it("should have valid data types for all experience fields", () => {
-      wrapper.vm.timeline.forEach((experience: any) => {
+      vm.timeline.forEach((experience: ExperienceItem) => {
         expect(typeof experience.title).toBe("string");
         expect(typeof experience.company).toBe("string");
         expect(typeof experience.duration).toBe("string");
@@ -225,12 +252,12 @@ describe("ExperienceComponent", () => {
 
   describe("Timeline Array Properties", () => {
     it("should have multiple experiences in timeline", () => {
-      expect(wrapper.vm.timeline.length).toBeGreaterThanOrEqual(2);
+      expect(vm.timeline.length).toBeGreaterThanOrEqual(2);
     });
 
     it("should be able to iterate over all experiences", () => {
       let count = 0;
-      wrapper.vm.timeline.forEach(() => {
+      vm.timeline.forEach(() => {
         count++;
       });
       expect(count).toBe(2);

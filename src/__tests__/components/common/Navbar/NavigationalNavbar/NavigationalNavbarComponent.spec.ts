@@ -1,9 +1,18 @@
 import { mount } from "@vue/test-utils";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { ref } from "vue";
+import { useRoute } from "vue-router";
+import NavigationalNavbarComponent from "../../../../../components/common/Navbar/NavigationalNavbar/NavigationalNavbarComponent.vue";
+
+type WrapperType = ReturnType<typeof mount>;
 
 // Mock Vue Router
-const mockRoute = {
+const mockRoute: {
+  name?: string;
+  path: string;
+  params: Record<string, unknown>;
+  query: Record<string, unknown>;
+} = {
   name: "Home",
   path: "/",
   params: {},
@@ -60,11 +69,8 @@ vi.mock("@/util/constants", () => ({
   },
 }));
 
-import NavigationalNavbarComponent from "@/components/common/Navbar/NavigationalNavbar/NavigationalNavbarComponent.vue";
-import { useRoute } from "vue-router";
-
 describe("NavigationalNavbarComponent", () => {
-  let wrapper: any;
+  let wrapper: WrapperType;
 
   beforeEach(() => {
     smAndDownRef.value = false;
@@ -79,7 +85,7 @@ describe("NavigationalNavbarComponent", () => {
               "<div id='navigation-navbar' :class='classes' :color='color' :elevation='elevation'><slot name='prepend'></slot><slot></slot><slot name='append'></slot></div>",
             props: ["color", "elevation", "class"],
             computed: {
-              classes() {
+              classes(this: { class?: string }) {
                 return `v-app-bar ${this.class || ""}`;
               },
             },
@@ -223,7 +229,9 @@ describe("NavigationalNavbarComponent", () => {
       await wrapper.vm.$nextTick();
       const navIcon = wrapper.find(".v-app-bar-nav-icon");
       await navIcon.trigger("click");
-      expect(wrapper.emitted("toggle-drawer")[0]).toEqual([true]);
+      const emitted = wrapper.emitted("toggle-drawer");
+      expect(emitted).toBeTruthy();
+      expect(emitted![0]).toEqual([true]);
     });
 
     it("should not emit toggle-drawer on large screens", () => {
