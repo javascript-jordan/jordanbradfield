@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import DrawerNavbar from "./DrawerNavbar/DrawerNavbar.vue";
 import NavigationalNavbarComponent from "./NavigationalNavbar/NavigationalNavbarComponent.vue";
+import ProgressNavbarComponent from "./ProgressNavbar/ProgressNavbarComponent.vue";
 import PromotionalNavbarComponent from "./PromotionalNavbar/PromotionalNavbarComponent.vue";
 
 const drawerOpen = ref(false);
@@ -12,6 +13,7 @@ const toggleDrawer = (toggle: boolean) => {
 </script>
 <template>
   <div id="navbar-component">
+    <progress-navbar-component />
     <promotional-navbar-component />
     <navigational-navbar-component @toggle-drawer="toggleDrawer" />
     <drawer-navbar @toggle-drawer="toggleDrawer" :open="drawerOpen" />

@@ -2,7 +2,6 @@
 import type { ObjectOrString } from "@/interfaces/lib/ILanguagePack";
 import TranslationService from "@/services/TranslationService/TranslationService";
 import { ref } from "vue";
-console.log(TranslationService.currentLanguage);
 
 const timeline: ObjectOrString = TranslationService.currentLanguage.PAGES.EXPERIENCES.timeline;
 
@@ -91,6 +90,7 @@ const openPanels = ref([0]);
 
 #timeline {
   overflow-x: hidden;
+  overflow-y: auto;
   word-wrap: break-word;
   word-break: break-word;
 
