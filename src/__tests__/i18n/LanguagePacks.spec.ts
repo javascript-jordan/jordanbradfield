@@ -129,8 +129,9 @@ describe("Language Packs", () => {
       expect(es.NAVBAR.PROMOTION).toContain("profesional");
     });
 
-    it("EXPERIENCES should be an array", () => {
-      expect(Array.isArray(es.PAGES.EXPERIENCES)).toBe(true);
+    it("EXPERIENCES should be an object", () => {
+      expect(typeof es.PAGES.EXPERIENCES).toBe("object");
+      expect(Array.isArray(es.PAGES.EXPERIENCES)).toBe(false);
     });
   });
 
@@ -157,8 +158,9 @@ describe("Language Packs", () => {
       expect(fr.NAVBAR.PROMOTION).toContain("professionnel");
     });
 
-    it("EXPERIENCES should be an array", () => {
-      expect(Array.isArray(fr.PAGES.EXPERIENCES)).toBe(true);
+    it("EXPERIENCES should be an object", () => {
+      expect(typeof fr.PAGES.EXPERIENCES).toBe("object");
+      expect(Array.isArray(fr.PAGES.EXPERIENCES)).toBe(false);
     });
   });
 
