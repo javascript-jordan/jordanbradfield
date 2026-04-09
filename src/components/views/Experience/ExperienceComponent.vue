@@ -5,17 +5,18 @@ import { ref } from "vue";
 
 const timeline: ObjectOrString = TranslationService.currentLanguage.PAGES.EXPERIENCES.timeline;
 
-const orderSkills = (skills: string[]) => {
-  return skills.sort((a, b) => (a > b ? 1 : -1));
-};
-const openPanels = ref([0]);
+const orderSkills = (skills: string[]): string[] => skills.sort((a, b) => a.localeCompare(b));
+
+const openPanels = ref<string[]>([]);
+
+const isPanelExpanded = (index: string): boolean => openPanels.value.includes(index);
 </script>
 <template>
   <div id="experience" class="p-y-1 p-x-2">
     <h1>Experience</h1>
     <div id="timeline" class="p-x-2">
       <v-timeline density="compact" align="start" side="end">
-        <v-timeline-item size="small" v-for="(item, index) in timeline" :key="index">
+        <v-timeline-item size="small" v-for="(item, rootIndex) in timeline" :key="rootIndex">
           <template v-slot:icon>
             <v-avatar :image="item.logo"></v-avatar>
           </template>
@@ -24,15 +25,16 @@ const openPanels = ref([0]);
               <v-avatar class="title-icon" :image="item.logo"></v-avatar>
               <div class="flex column justify-items-center">
                 <v-card-title class="text-headline-small" tag="h2"
-                  >{{ item.company }} - {{ item.title }}</v-card-title
+                  ><b>{{ item.company }} - {{ item.title }}</b></v-card-title
                 >
                 <v-card-subtitle>{{ item.duration }}</v-card-subtitle>
               </div>
             </div>
-            <v-card-text
-              ><h4>Employment Decription</h4>
-              <br />{{ item.description }}</v-card-text
-            >
+            <v-card-text>
+              <h4>Employment Description</h4>
+              <br />
+              {{ item.description }}
+            </v-card-text>
 
             <v-divider opacity=".7" thickness="3" gradient>Assignments</v-divider>
 
@@ -41,8 +43,8 @@ const openPanels = ref([0]);
                 size="large"
                 :icon="project.icon"
                 dot-color="primary"
-                v-for="(project, index) in item.projects"
-                :key="index"
+                v-for="(project, projectIndex) in item.projects"
+                :key="`${rootIndex}-${projectIndex}`"
               >
                 <v-card class="elevation-1">
                   <v-card-title class="text-headline-small flex justify-content-center"
@@ -58,10 +60,12 @@ const openPanels = ref([0]);
                     </div></v-card-title
                   >
 
-                  <v-card-text class="p-0">
-                    <v-expansion-panels class="m-t-1" v-model="openPanels">
+                  <v-card-text class="p-0 p-r-1">
+                    <v-expansion-panels class="m-y-2">
                       <v-expansion-panel
-                        expanded="true"
+                        :expanded="
+                          isPanelExpanded(`${item.company}-${project.title}-${projectIndex}`)
+                        "
                         title="Project Details"
                         :text="project.description"
                         class="m-b-2"
@@ -91,7 +95,7 @@ const openPanels = ref([0]);
 #timeline {
   overflow-x: hidden;
   overflow-y: auto;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   word-break: break-word;
 
   .title-icon {
@@ -101,26 +105,34 @@ const openPanels = ref([0]);
   :deep(.v-timeline-item__body),
   :deep(.project-title),
   :deep(.v-card-title) {
-    min-width: 0px;
+    min-width: 0;
     width: 100%;
     overflow-wrap: break-word;
-    word-wrap: break-word;
+    word-break: break-word;
     white-space: normal;
   }
+
   :deep(.text-headline-small) {
     .v-icon {
       display: none;
     }
   }
+
   :deep(.v-timeline-divider) {
     margin-left: 0.5em;
+
     :deep(.v-icon) {
-      /* color: #000000; */
+      // Icon styling can be added here if needed
     }
   }
+
   :deep(.v-slide-group__content) {
     width: 100%;
     flex-wrap: wrap;
+  }
+
+  :deep(.v-expansion-panel-title__overlay) {
+    opacity: 0.1;
   }
 
   @media #{map.get($display-breakpoints, 'xs')} {

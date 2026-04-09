@@ -25,7 +25,17 @@ type ExperienceComponentVm = {
   openPanels: number[];
   timeline: ExperienceItem[];
   orderSkills: (skills: string[]) => string[];
+  isPanelExpanded: (index: number) => boolean;
 };
+
+// Mock vuetify
+vi.mock("vuetify", async () => {
+  const actual = await vi.importActual("vuetify");
+  return {
+    ...actual,
+    createVuetify: vi.fn(() => ({})),
+  };
+});
 
 // Mock the TranslationService
 vi.mock("../../../../services/TranslationService/TranslationService", () => {
@@ -111,7 +121,7 @@ describe("ExperienceComponent", () => {
     it("should initialize openPanels ref correctly", () => {
       expect(vm.openPanels).toBeDefined();
       expect(Array.isArray(vm.openPanels)).toBe(true);
-      expect(vm.openPanels.length).toBeGreaterThan(0);
+      expect(vm.openPanels.length).toBe(0);
     });
 
     it("should have access to timeline data", () => {
@@ -136,8 +146,21 @@ describe("ExperienceComponent", () => {
       expect(secondItem.projects).toHaveLength(1);
     });
 
-    it("should have orderSkills method", () => {
-      expect(typeof vm.orderSkills).toBe("function");
+    it("should have isPanelExpanded method", () => {
+      expect(typeof vm.isPanelExpanded).toBe("function");
+    });
+  });
+
+  describe("isPanelExpanded Function", () => {
+    it("should return false for index not in openPanels", () => {
+      expect(vm.isPanelExpanded(0)).toBe(false);
+      expect(vm.isPanelExpanded(1)).toBe(false);
+    });
+
+    it("should return true for index in openPanels", () => {
+      vm.openPanels.push(0);
+      expect(vm.isPanelExpanded(0)).toBe(true);
+      expect(vm.isPanelExpanded(1)).toBe(false);
     });
   });
 
