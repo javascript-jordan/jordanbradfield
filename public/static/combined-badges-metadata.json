@@ -1,0 +1,182 @@
+{
+  "AWS Certified AI Practitioner": {
+    "id": "408f97e5-4763-40ca-9594-1e95243ba147",
+    "issued_at": "2025-09-20T21:00:00.000-03:00",
+    "name": "AWS Certified AI Practitioner",
+    "description": "Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. They can determine the correct types of AI/ML technologies to apply to specific use cases and know how to use AI, ML, and generative AI technologies responsibly. They are familiar with the AWS Global Infrastructure, core AWS services and use cases, AWS service pricing models, and the AWS shared responsibility model for security and compliance in the AWS Cloud."
+  },
+  "AWS Certified Cloud Practitioner": {
+    "id": "3efc915b-2025-4920-8ec2-6e5bb461714e",
+    "issued_at": "2019-12-10T20:00:00.000-04:00",
+    "name": "AWS Certified Cloud Practitioner",
+    "description": "Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects."
+  },
+  "AWS Cloud Quest: Cloud Practitioner - Training Badge": {
+    "id": "db7e5ff1-e296-4da3-a267-c73951a23f27",
+    "issued_at": "2024-05-07T16:00:36.000-03:00",
+    "name": "AWS Cloud Quest: Cloud Practitioner - Training Badge",
+    "description": "Earners of this badge have demonstrated basic solution building knowledge using AWS services and have a fundamental understanding of AWS Cloud concepts. Badge earners have acquired hands-on experience with compute, networking, database and security services."
+  },
+  "Applied Cloud Native Development": {
+    "id": "d500529e-e219-4c07-a05a-247ee68df9c6",
+    "issued_at": "2018-10-08T21:00:00.000-03:00",
+    "name": "Applied Cloud Native Development",
+    "description": "The badge earner is able to apply knowledge of Cloud Native Application Development following 12-factor app parameters and the characteristics of a scalable and resilient cloud application when delivering Cloud Native Application Development Engagements."
+  },
+  "Architectural Thinking": {
+    "id": "6c7fb6f6-0815-46eb-9865-4717267e29b4",
+    "issued_at": "2023-11-06T20:22:18.000-04:00",
+    "name": "Architectural Thinking",
+    "description": "Attaining this badge demonstrates the ability to provide a repeatable and consistent approach to developing IT architectures via a common thought process that enables Architects to communicate and work together based on a common set of artifacts. The audience for this badge is primarily Architects and other IT professionals acting in the role of an Architect."
+  },
+  "Cloud Digital Leader Certification": {
+    "id": "88b7de8e-502c-4e70-acc5-1ec22a1716b8",
+    "issued_at": "2021-12-14T20:00:00.000-04:00",
+    "name": "Cloud Digital Leader Certification",
+    "description": "A Cloud Digital Leader can articulate the capabilities of Google Cloud core products and services and how they benefit organizations. They can also describe common business use cases and how cloud solutions support an enterprise.This certification is for anyone who wishes to demonstrate their knowledge of cloud computing basics and how Google Cloud products and services can be used to achieve an organization’s goals."
+  },
+  "Data Privacy Fundamentals": {
+    "id": "7645412c-7500-4284-a766-4c3a75e0cdad",
+    "issued_at": "2020-01-23T14:15:46.000-04:00",
+    "name": "Data Privacy Fundamentals",
+    "description": "This badge earner understands the relationship between collection and dissemination of data in technology. The individual also understands the public expectation of privacy and the legal and political issues surrounding them."
+  },
+  "Enterprise Design Thinking Practitioner": {
+    "id": "6ca02cec-ef3d-4f42-9d41-da9ad6642529",
+    "issued_at": "2018-05-26T21:00:56.000-03:00",
+    "name": "Enterprise Design Thinking Practitioner",
+    "description": "The earner has acquired knowledge of applying Enterprise Design Thinking and its value. As a Practitioner, the badge earner finds opportunities to try it out in their every day work."
+  },
+  "Government Industry Jumpstart": {
+    "id": "b37d7363-3d63-4ff9-a7ba-935eb81bcd57",
+    "issued_at": "2018-09-06T21:03:26.000-03:00",
+    "name": "Government Industry Jumpstart",
+    "description": "This badge is awarded for successful completion of the Industry Jumpstart program"
+  },
+  "IBM API Connect Workflow Management": {
+    "id": "8e68b31a-0bb1-44d1-be76-3c53dbe93a16",
+    "issued_at": "2018-05-29T18:15:11.000-03:00",
+    "name": "IBM API Connect Workflow Management",
+    "description": "Badge earners know how to set up an API lifecycle and workflow in a portal. Specifically, they can define a development and publishing environment by using catalogs and spaces; create and execute a lifecycle approval process; grant permissions to various roles; publish APIs to a portal; update (supersede) APIs with new versions; and retire, archive, and delete APIs."
+  },
+  "IBM Agile Explorer": {
+    "id": "33321f63-959b-46c9-b2bd-25f013e73cfb",
+    "issued_at": "2018-06-01T22:09:20.000-03:00",
+    "name": "IBM Agile Explorer",
+    "description": "The Agile Explorer has a foundational understanding of Agile values, principles, and practices that allows them to initiate an Agile conversation with co-workers and colleagues. This badge is available to IBM employees only."
+  },
+  "IBM Blockchain Essentials": {
+    "id": "fefe8ae7-33b0-4536-9532-7bfb82945ebf",
+    "issued_at": "2017-07-27T21:00:00.000-03:00",
+    "name": "IBM Blockchain Essentials",
+    "description": "This badge earner has developed an understanding of Blockchain principles and practices and how they can be applied within a business environment. They have an understanding of Blockchain and distributed ledger systems, the important concepts and key use cases of Blockchain and how assets can be transferred in a Blockchain network."
+  },
+  "IBM Certified Advocate - Cloud v1": {
+    "id": "57ccfc67-98f3-4aa2-b1ae-cab77af27b5c",
+    "issued_at": "2021-11-29T16:38:31.000-04:00",
+    "name": "IBM Certified Advocate - Cloud v1",
+    "description": "An individual certified with the IBM Cloud Advocate credential can explain the essential characteristics, history, and trends of cloud computing. They can describe the business case for and identify the services, deployment models, components, and architectures underpinning cloud computing. Further, an individual with this certification can describe the services and offerings available on the IBM Cloud."
+  },
+  "IBM Cloud Essentials": {
+    "id": "8e22471b-da57-4610-b322-a61f76bc14ce",
+    "issued_at": "2018-05-27T16:37:12.000-03:00",
+    "name": "IBM Cloud Essentials",
+    "description": "This badge holder has a understanding of the essentials of IBM Cloud. Through an online course they have learned about the IBM Cloud platform and gained hands-on experience using the Cloud Foundry command-line interface and the IBM Eclipse tools for IBM Cloud. The badge earner has used these tools to deploy and modify basic applications using a managed service in IBM Cloud."
+  },
+  "IBM Consulting Agentic AI Foundations": {
+    "id": "a526c9b4-8c44-48f4-955a-735da64712b9",
+    "issued_at": "2025-12-21T22:04:14.000-04:00",
+    "name": "IBM Consulting Agentic AI Foundations",
+    "description": "This badge validates achievement of foundation-level competence with agentic AI and signifies that the badge holder has skills to apply agentic AI knowledge practically. Badge holders have completed essential agentic AI training and can apply that to conceptualize and drive agentic AI solutions aligned to IBM Consulting offerings for IBM and our clients. They have experience using IBM Consulting Advantage and strategic partner platforms and can mitigate ethical concerns of agentic AI."
+  },
+  "IBM Delivery Central Platform Foundations": {
+    "id": "e9a94410-51ba-4f84-b453-64de807db143",
+    "issued_at": "2025-02-18T20:09:13.000-04:00",
+    "name": "IBM Delivery Central Platform Foundations",
+    "description": "The badge earner has acquired foundational level knowledge of IBM Delivery Central Platform (IDCP) and can successfully use the platform for Project Execution / Management."
+  },
+  "IBM Garage Essentials": {
+    "id": "78453406-61c6-487d-b285-68eba569c17d",
+    "issued_at": "2022-07-05T10:28:26.000-03:00",
+    "name": "IBM Garage Essentials",
+    "description": "This badge earner is able to demonstrate understanding of IBM Garage Methodology, assets and platforms."
+  },
+  "IBM Mentor": {
+    "id": "b5df86a2-2188-40d8-900f-cd82ebc4444b",
+    "issued_at": "2020-07-14T16:24:08.000-03:00",
+    "name": "IBM Mentor",
+    "description": "This badge holder is recognized by IBM for developing and cultivating a mentoring relationship with others. Mentoring is an important career development opportunity to enhance skills and achieve long-term career aspirations. The guidance given to the protégé has subsequently enabled the protégé to gain skills and expertise to support their career development, expertise in the job, and/or social skills. The value of the mentoring benefits and impact was validated by the protégé"
+  },
+  "IBM Recognized Teacher": {
+    "id": "a5836272-693a-4c02-a597-80c3331882d7",
+    "issued_at": "2020-10-01T14:59:44.000-03:00",
+    "name": "IBM Recognized Teacher",
+    "description": "This badge holder has demonstrated their knowledge and expertise as a Teacher. They are Subject Matter Experts (SMEs) on the topic(s) presented. As a Teacher, they have been recognized for their ability to effectively transfer skills and knowledge so that the recipient is able to apply the skill in a specific situation or leverage the materials presented"
+  },
+  "JavaScript Front End Development": {
+    "id": "d2ba402a-f916-496f-885e-1e29918c3a2e",
+    "issued_at": "2023-09-03T10:42:35.000-03:00",
+    "name": "JavaScript Front End Development",
+    "description": "The badge earner is able to develop Front End JavaScript-based Single Page and progressive Web applications."
+  },
+  "License to Lead - First-Line Manager": {
+    "id": "b9e95bac-e5ef-4d38-bc6e-d0a657da2579",
+    "issued_at": "2021-07-09T16:34:32.000-03:00",
+    "name": "License to Lead - First-Line Manager",
+    "description": "The badge earner is a manager who role models the Growth Behaviors while leading their teams towards Business Outcomes. Recipients of this badge will be equipped with knowledge and tools to address business challenges effectively, apply IBM’s performance management approach, create signature employee experiences, apply employee engagement strategies, and create an inclusive and safe environment where IBMers can bring their full selves to work."
+  },
+  "License to Lead - Senior Manager": {
+    "id": "31a5046c-d127-4ecf-9b52-248b358e7999",
+    "issued_at": "2021-10-14T11:27:15.000-03:00",
+    "name": "License to Lead - Senior Manager",
+    "description": "he badge earner is prepared to lead multiple layers of people within their organization towards excellence. This badge recognizes leaders with the capability to create a culture of high performance, continuous feedback, coaching, and talent development. This badge recipient also embodies the Growth Behaviors to inspire and influence, amplify creativity and innovation, lead as a coach, and cultivate trust and a growth mindset among their teams."
+  },
+  "Master the Mainframe - Part 2": {
+    "id": "d6afac91-a1fc-4d89-a70d-61a74c78ba92",
+    "issued_at": "2017-01-05T20:00:00.000-04:00",
+    "name": "Master the Mainframe - Part 2",
+    "description": "The badge earner has mastered basic mainframe concepts. This individual is able to perform extensive programming (advanced commands, system setup, and advanced system navigation) and application developing (C, JAVA, COBOL, assembler and REXX) tasks, as well as having hands-on experience with multiple operating systems (Linux on z Systems, z/VM, z/OS, z/TPF)."
+  },
+  "Microsoft Certified: Azure Fundamentals": {
+    "id": "670a3b02-0d5a-47d8-8e29-09ff1b84ad6b",
+    "issued_at": "2020-03-17T18:25:19.000-03:00",
+    "name": "Microsoft Certified: Azure Fundamentals",
+    "description": "Earners of the Azure Fundamentals certification have demonstrated foundational level knowledge of cloud services and how those services are provided with Microsoft Azure."
+  },
+  "Statistics 101": {
+    "id": "df5ceb2a-4395-4a48-93a1-5640728d8b03",
+    "issued_at": "2020-01-15T16:07:23.000-04:00",
+    "name": "Statistics 101",
+    "description": "This badge earner demonstrates an understanding of descriptive statistics, normal distribution, standard deviation, variance, correlation, and best practices for data visualization."
+  },
+  "Travel and Transportation Industry Jumpstart": {
+    "id": "babec22f-5760-4fb2-b27e-99d7961783a1",
+    "issued_at": "2018-07-04T21:02:51.000-03:00",
+    "name": "Travel and Transportation Industry Jumpstart",
+    "description": "This badge is awarded for successful completion of the Industry Jumpstart program"
+  },
+  "Travel and Transportation Insights and Solutions (Bronze)": {
+    "id": "33a2f2df-7529-4fba-953c-0c5abe1bc1d1",
+    "issued_at": "2021-06-07T14:21:40.000-03:00",
+    "name": "Travel and Transportation Insights and Solutions (Bronze)",
+    "description": "Awarded to a candidate that understands the client’s industry and applies that knowledge to deliver outstanding client value. It involves using knowledge related to business challenges, industry trends, the competition, business models."
+  },
+  "Travel and Transportation Insights and Solutions (Silver)": {
+    "id": "62fd3f28-f84c-4cf0-b85e-b1679357e61c",
+    "issued_at": "2021-09-21T10:35:17.000-03:00",
+    "name": "Travel and Transportation Insights and Solutions (Silver)",
+    "description": "Able to apply new insights and solutions to change a company's business model and or operating model."
+  },
+  "watsonx Orchestrate Practitioner Advanced": {
+    "id": "4eb1b4ee-7d7a-4421-959b-73a22bfc77ca",
+    "issued_at": "2025-12-12T17:04:20.000-04:00",
+    "name": "watsonx Orchestrate Practitioner Advanced",
+    "description": "The badge earner has demonstrated both advanced knowledge and skill with watsonx Orchestrate by successfully completing required learning and the ability to successfully deploy the product at a client which includes planning, development and deployment of solutions using watsonx Orchestrate. The successful deployment demonstrates that the badge earner can effectively deliver the value clients are looking for from this technology."
+  },
+  "watsonx.ai Technical Sales Intermediate": {
+    "id": "004f2d09-f33a-462d-af82-02b07034a19e",
+    "issued_at": "2024-09-30T09:49:36.000-03:00",
+    "name": "watsonx.ai Technical Sales Intermediate",
+    "description": "This badge earner has gained hands-on experience with IBM watsonx.ai. They understand how watsonx.ai works and how it delivers generative AI and foundation model capabilities, as well as how it fits into the overall watsonx strategy. By leveraging the resources included, they can discuss the watsonx.ai value proposition with clients and demonstrate its key features and capabilities."
+  }
+}
