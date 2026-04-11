@@ -3,6 +3,7 @@ interface BadgeMetadata {
   issued_at: string;
   name: string;
   description: string;
+  image?: string;
 }
 
 type CombinedBadgesMetadata = Record<string, BadgeMetadata>;

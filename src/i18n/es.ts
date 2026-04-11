@@ -224,6 +224,84 @@ const EsStrings: ObjectOrString = {
         },
       ],
     },
+    SKILLS: {
+      TECHNICAL: [
+        {
+          name: "Desarrollo de API",
+          description:
+            "He trabajado con varios clientes construyendo principalmente APIs RESTful en tecnologías como Spring Boot y Express.JS. Al desarrollar estas APIs, seguí mejores prácticas como elegir el método HTTP según la operación que se necesitaba realizar. Me aseguré de que las APIs fallaran con gracia si, por ejemplo, un parámetro se formateaba incorrectamente o era nulo. He asegurado mis APIs detrás de autenticación JWT. También implementé herramientas como Lombok y herramientas de formateo de código para introducir consistencia y reducir el código de plomería.",
+          technologies: [
+            { name: "Express", premium: true },
+            { name: "Spring Boot", premium: true },
+            { name: "Swagger/OpenAPI", premium: false },
+            { name: "Postman", premium: true },
+          ],
+        },
+        {
+          name: "DevOps",
+          description:
+            "Aunque nunca he tenido el título oficial de ingeniero DevOps dedicado, las responsabilidades usualmente venían con el rol de ingeniería que desempeñaba. Me aseguraba de que los requisitos fueran claros antes de abrir una rama, implementar mis cambios, escribir pruebas unitarias para cubrir casos típicos y de borde antes de empujar a una rama y abrir un PR. Usualmente éramos responsables de asegurar que nuestras tuberías pasaran y nuestros pods K*s se iniciaran y estuvieran saludables después de fusionar nuestro código y revertir en caso de falla.",
+          technologies: [
+            { name: "Metodologías DCUT", premium: true },
+            { name: "Docker", premium: true },
+            { name: "Jenkins", premium: false },
+            { name: "Sonarqube", premium: false },
+            { name: "Kubernetes", premium: true },
+            { name: "Quality Gating", premium: true },
+          ],
+        },
+        {
+          name: "Lenguajes de programación",
+          description:
+            "El primer lenguaje de programación que me presentaron fue NodeJS en 2016, antes de que tuviéramos todas las características geniales de ES6 y ESNext de hoy. Me encantó JavaScript y lo perseguí intensamente en frontend y backend. También me intrigó un lenguaje más fuertemente tipado como Java, que soportaba principios clave como herencia, abstracción y encapsulación. Normalmente elijo Node para aplicaciones/scripts de corta duración y con uso intensivo de memoria, y Java para aplicaciones de mayor duración y con uso intensivo de CPU. He incursionado en Python y si me pidieran entregar usando eso, podría, pero no sería mi primera opción.",
+          technologies: [
+            { name: "Java", premium: true },
+            { name: "JavaScript/ECMAScript", premium: true },
+            { name: "TypeScript", premium: true },
+            { name: "Python", premium: false },
+            { name: "SQL", premium: false },
+          ],
+        },
+        {
+          name: "Desarrollo de UI",
+          description:
+            "Disfruto mucho el desarrollo de UI y mi primera exposición fue con ~AngularJS 1.4. Obviamente mucho ha cambiado desde entonces y he disfrutado aprender nuevas técnicas y metodologías. Mi framework frontend preferido es VueTS, ya que creo que es un buen híbrido entre Angular y React y ofrece lo mejor de ambos mundos, ya sea usando composition u options API. También tengo una profunda experiencia técnica con tecnologías vanilla y las usé junto a frameworks para comportamiento personalizado.",
+          technologies: [
+            { name: "Vue", premium: true },
+            { name: "React", premium: true },
+            { name: "Angular", premium: true },
+            { name: "AngularJS", premium: false },
+            { name: "Cordova", premium: false },
+            { name: "Vanilla HTML/JS/CSS", premium: true },
+          ],
+        },
+        {
+          name: "Habilidades funcionales",
+          description:
+            "A medida que he progresado en mi carrera, las habilidades funcionales han sido cada vez más importantes, especialmente al liderar un equipo de desarrollo y comunicar y documentar soluciones potenciales. He aprendido a ser un oyente más activo al comunicarme con mi cliente para asegurarme de obtener una comprensión exhaustiva de su situación actual. Además, he empezado a dedicar tiempo a redactar varios diagramas arquitectónicos potenciales en lugar de intentar solucionar algo de inmediato.",
+          technologies: [
+            { name: "Soluciones Técnicas/Documentación", premium: true },
+            { name: "Resolución de Problemas", premium: true },
+            { name: "Technical Lead", premium: true },
+            { name: "Comunicación Efectiva", premium: false },
+            { name: "Organización", premium: false },
+          ],
+        },
+        {
+          name: "Herramientas",
+          description:
+            "Las herramientas son increíblemente importantes en los esfuerzos diarios de los equipos de desarrollo. Varias IDE ofrecen extensiones para agilizar el desarrollo, ya sea Copilot, Lombok, formateo de código, etc. Como ingenieros debemos estar abiertos a la idea de aprovechar herramientas teniendo en cuenta cualquier restricción que el cliente pueda tener contra algo relativamente nuevo como Copilot. También me aseguro de utilizar la suite Atlassian a mi máxima ventaja, vinculando commits/PRs a historias de Jira y documentación a través de Confluence.",
+          technologies: [
+            { name: "Git", premium: true },
+            { name: "VSCode", premium: true },
+            { name: "IntelliJ", premium: true },
+            { name: "Atlassian Suite", premium: true },
+            { name: "ADO", premium: false },
+            { name: "Copilot", premium: false },
+          ],
+        },
+      ],
+    },
   },
 };
 

@@ -224,6 +224,84 @@ const FrStrings: ObjectOrString = {
         },
       ],
     },
+    SKILLS: {
+      TECHNICAL: [
+        {
+          name: "Développement d'API",
+          description:
+            "J'ai travaillé avec plusieurs clients en construisant principalement des APIs RESTful dans des technologies comme Spring Boot et Express.JS. Lors du développement de ces APIs, j'ai suivi les meilleures pratiques comme choisir la méthode HTTP en fonction de l'opération qui devait être effectuée. Je me suis assuré que les APIs échouent de manière gracieuse si, par exemple, un paramètre était mal formaté ou nul. J'ai sécurisé mes APIs derrière l'authentification JWT. J'ai également mis en œuvre des outils comme Lombok et des outils de formatage de code pour instaurer la cohérence et réduire le code de plomberie.",
+          technologies: [
+            { name: "Express", premium: true },
+            { name: "Spring Boot", premium: true },
+            { name: "Swagger/OpenAPI", premium: false },
+            { name: "Postman", premium: true },
+          ],
+        },
+        {
+          name: "DevOps",
+          description:
+            "Bien que je n'aie jamais eu le titre officiel d'ingénieur DevOps dédié, les responsabilités venaient généralement avec le rôle d'ingénierie que je remplissais. Je m'assurais que les exigences étaient claires avant d'ouvrir une branche, d'implémenter mes changements, d'écrire des tests unitaires pour couvrir les cas typiques et les cas limites avant de pousser sur une branche et d'ouvrir une PR. Nous étions habituellement responsables de nous assurer que nos pipelines passaient et que nos pods K*s se lançaient et étaient sains après avoir fusionné notre code et procédé à un rollback en cas d'échec.",
+          technologies: [
+            { name: "Méthodologies DCUT", premium: true },
+            { name: "Docker", premium: true },
+            { name: "Jenkins", premium: false },
+            { name: "Sonarqube", premium: false },
+            { name: "Kubernetes", premium: true },
+            { name: "Quality Gating", premium: true },
+          ],
+        },
+        {
+          name: "Langages de programmation",
+          description:
+            "Le premier langage de programmation auquel j'ai été initié était NodeJS en 2016, avant que nous ayons toutes les fonctionnalités sympas d'ES6 et ESNext d'aujourd'hui. J'ai adoré JavaScript et je l'ai poursuivi intensivement sur le frontend et le backend. J'ai également été intrigué par un langage plus fortement typé comme Java, qui supportait des principes clés tels que l'héritage, l'abstraction et l'encapsulation. Je choisis généralement Node pour des applications/scripts de courte durée et gourmands en mémoire, et Java pour des applications de plus longue durée et plus exigeantes en CPU. J'ai trempé dans Python et si l'on me demandait de livrer avec lui, je pourrais, mais ce ne serait pas mon premier choix.",
+          technologies: [
+            { name: "Java", premium: true },
+            { name: "JavaScript/ECMAScript", premium: true },
+            { name: "TypeScript", premium: true },
+            { name: "Python", premium: false },
+            { name: "SQL", premium: false },
+          ],
+        },
+        {
+          name: "Développement UI",
+          description:
+            "J'aime vraiment le développement UI et ma première exposition à cela a été avec ~AngularJS 1.4. Évidemment beaucoup de choses ont changé depuis lors et j'ai vraiment apprécié apprendre de nouvelles techniques et méthodologies. Mon framework frontend de prédilection est VueTS car je pense que c'est un bon hybride entre Angular et React et qu'il offre le meilleur des deux mondes, que ce soit en utilisant composition ou options API. J'ai également une profonde expertise technique avec les technologies vanilla et je les ai utilisées aux côtés de frameworks pour un comportement personnalisé.",
+          technologies: [
+            { name: "Vue", premium: true },
+            { name: "React", premium: true },
+            { name: "Angular", premium: true },
+            { name: "AngularJS", premium: false },
+            { name: "Cordova", premium: false },
+            { name: "Vanilla HTML/JS/CSS", premium: true },
+          ],
+        },
+        {
+          name: "Compétences fonctionnelles",
+          description:
+            "Au fur et à mesure que j'ai progressé dans ma carrière, les compétences fonctionnelles sont devenues de plus en plus importantes, surtout lorsque je dirige une équipe de développement et que je communique et documente des solutions potentielles. J'ai appris à être un auditeur plus actif lorsque je communique avec mon client afin de m'assurer de bien comprendre sa situation actuelle. En plus de cela, j'ai commencé à prendre du temps pour rédiger plusieurs diagrammes d'architecture potentiels plutôt que d'essayer de solutionner quelque chose immédiatement.",
+          technologies: [
+            { name: "Solution technique/Documentation", premium: true },
+            { name: "Résolution de problèmes", premium: true },
+            { name: "Technical Lead", premium: true },
+            { name: "Communication efficace", premium: false },
+            { name: "Organisation", premium: false },
+          ],
+        },
+        {
+          name: "Outils",
+          description:
+            "Les outils sont incroyablement importants dans les efforts quotidiens des équipes de développement. Plusieurs IDE proposent des extensions pour accélérer le développement, que ce soit Copilot, Lombok, le formatage de code, etc. En tant qu'ingénieurs, nous devrions être ouverts à l'idée de tirer parti des outils tout en gardant à l'esprit les éventuelles restrictions que le client peut avoir contre quelque chose de relativement nouveau comme Copilot. De plus, je m'assure d'utiliser la suite Atlassian à mon avantage, en liant les commits/PRs aux tickets Jira et à la documentation via Confluence.",
+          technologies: [
+            { name: "Git", premium: true },
+            { name: "VSCode", premium: true },
+            { name: "IntelliJ", premium: true },
+            { name: "Atlassian Suite", premium: true },
+            { name: "ADO", premium: false },
+            { name: "Copilot", premium: false },
+          ],
+        },
+      ],
+    },
   },
 };
 
