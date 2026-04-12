@@ -6,7 +6,7 @@ import CredentialsComponent from "./Credentials/CredentialsComponent.vue";
     <h1>Skills & Credentials</h1>
 
     <div class="flex align-items-center justify-content-center m-t-2">
-      <!-- <SkillsComponent /> -->
+      <SkillsComponent />
       <CredentialsComponent />
     </div>
   </div>

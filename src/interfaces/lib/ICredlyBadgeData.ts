@@ -4,6 +4,7 @@ interface BadgeMetadata {
   name: string;
   description: string;
   image?: string;
+  show?: boolean;
 }
 
 type CombinedBadgesMetadata = Record<string, BadgeMetadata>;

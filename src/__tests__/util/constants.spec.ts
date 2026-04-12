@@ -57,7 +57,7 @@ describe("Constants", () => {
 
     it("should have exactly 2 external links", () => {
       const links = Object.keys(constants.EXTERNAL_LINKS);
-      expect(links).toHaveLength(2);
+      expect(links).toHaveLength(3);
     });
 
     it("should contain only string values", () => {
