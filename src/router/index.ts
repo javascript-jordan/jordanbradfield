@@ -23,7 +23,7 @@ export const ROUTES: Routes[] = [
   {
     name: "Skills",
     path: "/skills",
-    component: () => import("../components/views/Skills/SkillsComponent.vue"),
+    component: () => import("../components/views/Skills/SkillsCredentialsComponent.vue"),
     icon: "mdi-xml",
   },
   {

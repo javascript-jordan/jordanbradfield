@@ -28,4 +28,8 @@ $flex-directions: ("column", "row", "column-reverse", "row-reverse");
       justify-content: #{$spacing};
     }
   }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
 }

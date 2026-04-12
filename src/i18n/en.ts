@@ -228,6 +228,7 @@ const EnStrings: ObjectOrString = {
       TECHNICAL: [
         {
           name: "API Development",
+          icon: "mdi-cloud-braces",
           description:
             "I've worked with several clients building primarily RESTful APIs in technologies like Spring Boot and Express.JS. When developing these APIs, I followed best practices like choosing the HTTP method based on the operation that needed to be performed. I ensured that APIs would fail gracefully if, for example, a parameter was formatted incorrectly or null. I've secured my APIs behind JWT authentication. I also implemented tooling like Lombok code formatting tools to introduce consistency and reduce plumbing code.",
           technologies: [
@@ -239,6 +240,7 @@ const EnStrings: ObjectOrString = {
         },
         {
           name: "DevOps",
+          icon: "mdi-infinity",
           description:
             "While I've never had the official title of a dedicated DevOps engineer, the responsibilities usually came with the engineering role I was fulfilling. I would ensure requirements were clear before opening a branch, implementing my changes, writing unit tests to cover typical and edge cases before pushing to a branch and opening a PR. We were usually responsible for ensuring our pipelines passed and our K*s pods spun up and were healthy after merging our code and rolling back should there be a failure.",
           technologies: [
@@ -254,6 +256,7 @@ const EnStrings: ObjectOrString = {
           description:
             "The first programming language I was introduced to was NodeJS back in 2016 before we had all the cool ES6 and ESNext features today. I loved JavaScript and pursued it heavily on the frontend and backend. I was also intrigued by a more strongly typed language like Java which supported key principles like inheritance, abstraction, and encapsulation. I typically choose Node for apps/scripts that are short running and memory intensive, and Java for longer running, higher CPU-intensive apps. I've dabbled in Python and if asked to deliver using it, I could, but it wouldn't be my first choice.",
           name: "Programming Languages",
+          icon: "mdi-code-braces",
           technologies: [
             { name: "Java", premium: true },
             { name: "JavaScript/ECMAScript", premium: true },
@@ -264,6 +267,7 @@ const EnStrings: ObjectOrString = {
         },
         {
           name: "UI Development",
+          icon: "mdi-view-dashboard",
           description:
             "I really enjoy UI development and my first exposure to it was with ~AngularJS 1.4. Obviously a lot has changed since then and I've really enjoyed learning new techniques and methodologies. My go-to frontend framework is VueTS as I think it's a nice hybrid between Angular and React and gives the best of both worlds whether using composition or options API. I also have deep technical expertise with vanilla technologies and used them alongside frameworks for custom behaviour.",
           technologies: [
@@ -279,6 +283,7 @@ const EnStrings: ObjectOrString = {
           description:
             "As I've progressed in my career, functional skills have become more and more important especially when leading a development team and communicating and documenting potential solutions. I've learned to become more of an active listener when communicating with my client so I can ensure I gain a thorough understanding of their current situation. On top of that, I've started taking time to draft several potential architectural diagrams instead of trying to immediately solution something.",
           name: "Functional Skills",
+          icon: "mdi-account-group",
           technologies: [
             { name: "Technical Solutioning/Documenting", premium: true },
             { name: "Problem Solving", premium: true },
@@ -291,6 +296,7 @@ const EnStrings: ObjectOrString = {
           description:
             "Tooling is incredibly important in the day-to-day efforts of development teams. Several IDEs offer extensions to expedite development, whether it be Copilot, Lombok, code formatting, etc. As engineers we should be open to the idea of leveraging tools while keeping in mind any restrictions the client may have against something relatively new like Copilot. Also, I make sure to utilize the Atlassian suite to my full advantage, linking commits/PRs to Jira stories and documentation through Confluence.",
           name: "Tooling",
+          icon: "mdi-cogs",
           technologies: [
             { name: "Git", premium: true },
             { name: "VSCode", premium: true },
