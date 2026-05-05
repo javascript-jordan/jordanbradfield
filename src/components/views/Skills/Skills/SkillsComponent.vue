@@ -5,7 +5,7 @@ const skills = TranslationService.currentLanguage.PAGES.SKILLS.TECHNICAL;
 </script>
 <template>
   <div id="skills">
-    <v-card class="mx-auto p-1">
+    <v-card class="skills-card mx-auto p-1">
       <h2>Skills</h2>
       <v-divider class="m-y-2"></v-divider>
       <div class="flex column">
@@ -47,6 +47,13 @@ const skills = TranslationService.currentLanguage.PAGES.SKILLS.TECHNICAL;
 </template>
 <style lang="scss" scoped>
 #skills {
+  width: 100%;
+  .skill {
+    width: 100%;
+    .descriptions {
+      flex-grow: 1;
+    }
+  }
   :deep(.v-expansion-panel-title__overlay) {
     opacity: 0.1;
   }

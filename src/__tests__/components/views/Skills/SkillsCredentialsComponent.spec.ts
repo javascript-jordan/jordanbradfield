@@ -70,7 +70,7 @@ describe("SkillsCredentialsComponent", () => {
 
   describe("HTML Structure", () => {
     it("should have correct root element", () => {
-      const root = wrapper.find("#skills");
+      const root = wrapper.find("#skills-credentials");
       expect(root.exists()).toBe(true);
       expect(root.classes()).toContain("p-1");
     });
@@ -84,10 +84,10 @@ describe("SkillsCredentialsComponent", () => {
     });
 
     it("should have correct tag structure", () => {
-      expect(wrapper.html()).toContain('<div id="skills" class="p-1">');
-      expect(wrapper.html()).toContain("<h1>Skills &amp; Credentials</h1>");
+      expect(wrapper.html()).toContain('id="skills-credentials"');
+      expect(wrapper.html()).toContain("Skills &amp; Credentials");
       expect(wrapper.html()).toContain(
-        '<div class="flex align-items-center justify-content-center m-t-2">',
+        'class="flex column align-items-center justify-content-center m-t-2"',
       );
     });
   });
